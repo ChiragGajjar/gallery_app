@@ -84,10 +84,43 @@ class DashboardImagesListScreenState extends ConsumerState<DashboardImagesListSc
                           mainAxisSpacing: 5,
                         ),
                         itemBuilder: (BuildContext context, int index) {
-                          return TileView(
-                            index: index,
-                            url: arrImagesList[index].largeImageURL,
-                            callback: () => _openDetail(context, index),
+                          return Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              TileView(
+                                index: index,
+                                url: arrImagesList[index].largeImageURL,
+                                callback: () => _openDetail(context, index),
+                              ),
+                              Positioned(
+                                bottom:1,
+                                child: Container(
+                                  color: Colors.grey.shade800,
+                                  height: 20,
+                                  child: Row(
+                                    children: [
+                                      const Icon(Icons.thumb_up, color: Colors.blue, size: 18,),
+                                      Text(
+                                        ' ${arrImagesList[index].likes}',
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      const Icon(Icons.remove_red_eye, color: Colors.blue, size: 18,),
+                                      Text(
+                                        ' ${arrImagesList[index].views}',
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 14,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
                           );
                         },
                       ),
