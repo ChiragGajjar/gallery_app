@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import '../../../main.dart';
+
+class CommonAppbar extends AppBar {
+  CommonAppbar({
+    Widget? leading,
+    bool automaticallyImplyLeading = true,
+    Widget? title,
+    List<Widget>? actions,
+    PreferredSizeWidget? bottom,
+    double? elevation,
+    Color? shadowColor,
+    ShapeBorder? shape,
+    Color? backgroundColor,
+    Color? foregroundColor,
+    IconThemeData? iconTheme,
+    IconThemeData? actionsIconTheme,
+    TextTheme? textTheme,
+    bool primary = true,
+    bool centerTitle = true,
+    bool excludeHeaderSemantics = false,
+    double? titleSpacing,
+    double toolbarOpacity = 1.0,
+    double bottomOpacity = 1.0,
+    double? toolbarHeight,
+    double? leadingWidth,
+    SystemUiOverlayStyle? systemOverlayStyle,
+  }) : super(
+          leading: leading,
+          automaticallyImplyLeading: automaticallyImplyLeading,
+          title: title,
+          actions: actions,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: backdropImage.image,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          bottom: bottom,
+          elevation: elevation,
+          shadowColor: shadowColor,
+          shape: shape,
+          backgroundColor: backgroundColor,
+          foregroundColor: foregroundColor,
+          // brightness: brightness,
+          iconTheme: iconTheme,
+          actionsIconTheme: actionsIconTheme,
+          primary: primary,
+          centerTitle: centerTitle,
+          excludeHeaderSemantics: excludeHeaderSemantics,
+          titleSpacing: titleSpacing,
+          toolbarOpacity: toolbarOpacity,
+          bottomOpacity: bottomOpacity,
+          toolbarHeight: toolbarHeight,
+          leadingWidth: leadingWidth,
+          toolbarTextStyle: textTheme?.bodyMedium,
+          titleTextStyle: textTheme?.titleLarge,
+          // toolbarTextStyle: toolbarTextStyle,
+          // titleTextStyle: titleTextStyle,
+          systemOverlayStyle: systemOverlayStyle,
+        );
+}
