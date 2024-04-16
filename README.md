@@ -17,3 +17,8 @@ Before running the initialization script, you must install the following softwar
 ## Initialize the project
 
 In order to initialize the project you must run the scripts/init_project bash script while inside the q_flutter_started folder.
+
+This project is a starting point for a Flutter application.
+
+## ScreenShots
+![gallary_app](https://github.com/ChiragGajjar/my_gallery_app/assets/20324254/4bd34b90-6ee7-495d-8296-8bc5d90728b4)
